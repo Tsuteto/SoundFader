@@ -1,0 +1,51 @@
+{
+    "Actions": [
+        {
+            "Icon": "images/action-icon",
+            "Name": "For Apps",
+            "States": [
+                {
+                    "Image": "images/action-standby"
+                }
+            ],
+            "SupportedInMultiActions": false,
+            "PropertyInspectorPath": "property_inspector/pi-fader-app.html",
+            "Tooltip": "Fades in/out the sound of a specific app",
+            "UUID": "jp.tsuteto.soundfader.app-fader"
+        },
+        {
+            "Icon": "images/action-icon",
+            "Name": "For Devices",
+            "States": [
+                {
+                    "Image": "images/action-standby"
+                }
+            ],
+            "SupportedInMultiActions": false,
+            "PropertyInspectorPath": "property_inspector/pi-fader-device.html",
+            "Tooltip": "Fades in/out the sound of a specific sound device",
+            "UUID": "jp.tsuteto.soundfader.device-fader"
+        }
+    ],
+    "UUID": "jp.tsuteto.soundfader",
+    "Author": "Tsuteto",
+    "Category": "Sound Fader",
+    "CategoryIcon": "images/category-icon",
+    "CodePath": "SoundFader.exe",
+    "CodePathWin": "SoundFader.exe",
+    "Description": "Allows you to fade in and out the sound of apps and sound devices with a single touch.",
+    "Name": "Sound Fader",
+    "Icon": "images/plugin-icon",
+    "URL": "https://tsuteto.hacca.jp/",
+    "Version": "1.0.0",
+    "SDKVersion": 2,
+    "Software": {
+        "MinimumVersion": "6.4"
+    },
+    "OS": [
+        {
+            "Platform": "windows",
+            "MinimumVersion": "10"
+        }
+    ]
+}
