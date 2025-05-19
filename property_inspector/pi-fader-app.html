@@ -62,6 +62,47 @@
 					</div>
 				</div>
 			</div>
+			<div class="sdpi-heading" data-localize>Fade-Out Bending</div>
+			<div class="sdpi-item" id="bendingOut" type="range">
+				<div class="sdpi-item-label" data-localize>Intensity</div>
+				<div class="sdpi-item-value">
+					<span id="min" class="clickable" value="0"><img src="img/fadeout-liner.svg" height="16" width="16" /></span>
+					<input class="floating-tooltip" data-suffix="" type="range"
+						   min="0" max="20" step="1" name="BendingOut" id="txtBendingOut" />
+					<span id="max" class="clickable" value="20"><img src="img/fadeout-easeout.svg" height="16" width="16" /></span>
+				</div>
+			</div>
+			<div class="sdpi-item" id="bendingTypeOut" type="range">
+				<div class="sdpi-item-label" data-localize>Type</div>
+				<select id="selBendingTypeOut" class="sdpi-item-value select" name="BendingTypeOut">
+					<option value="POW" data-localize>Exponential</option>
+					<option value="LOG" data-localize>Logarithmic</option>
+				</select>
+			</div>
+			<div class="sdpi-heading" data-localize>Fade-In Bending</div>
+			<div class="sdpi-item" id="bendingIn" type="range">
+				<div class="sdpi-item-label" data-localize>Intensity</div>
+				<div class="sdpi-item-value">
+					<span id="min" class="clickable" value="0"><img src="img/fadein-liner.svg" height="16" width="16" /></span>
+					<input class="floating-tooltip" data-suffix="" type="range"
+						   min="0" max="20" step="1" name="BendingIn" id="txtBendingIn" />
+					<span id="max" class="clickable" value="20"><img src="img/fadein-easein.svg" height="16" width="16" /></span>
+				</div>
+			</div>
+			<div class="sdpi-item" id="bendingTypeIn" type="range">
+				<div class="sdpi-item-label" data-localize>Type</div>
+				<select id="selBendingTypeIn" class="sdpi-item-value select" name="BendingTypeIn">
+					<option value="POW" data-localize>Exponential</option>
+					<option value="LOG" data-localize>Logarithmic</option>
+				</select>
+			</div>
+			<hr />
+			<div class="sdpi-item" id="item-custom-desc">
+				<div class="sdpi-item-label icon info"></div>
+				<div class="sdpi-item-value">
+					<div data-localize>For details on the bending, see the SoundFader plugin page in Marketplace.</div>
+				</div>
+			</div>
 		</form>
 	</div>
 	<script src="libs/js/utils.js"></script>

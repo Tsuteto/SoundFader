@@ -8,7 +8,7 @@
                     "Image": "images/action-standby"
                 }
             ],
-            "SupportedInMultiActions": false,
+            "SupportedInMultiActions": true,
             "PropertyInspectorPath": "property_inspector/pi-fader-app.html",
             "Tooltip": "Fades in/out the sound of a specific app",
             "UUID": "jp.tsuteto.soundfader.app-fader"
@@ -21,7 +21,7 @@
                     "Image": "images/action-standby"
                 }
             ],
-            "SupportedInMultiActions": false,
+            "SupportedInMultiActions": true,
             "PropertyInspectorPath": "property_inspector/pi-fader-device.html",
             "Tooltip": "Fades in/out the sound of a specific sound device",
             "UUID": "jp.tsuteto.soundfader.device-fader"
@@ -37,7 +37,7 @@
     "Name": "Sound Fader",
     "Icon": "images/plugin-icon",
     "URL": "https://tsuteto.hacca.jp/",
-    "Version": "1.0.0",
+    "Version": "1.1.0",
     "SDKVersion": 2,
     "Software": {
         "MinimumVersion": "6.4"

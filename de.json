@@ -12,8 +12,8 @@
     "Localization": {
         "Action": "Aktion",
         "Toggle": "Umschalten",
-        "Fade out": "Einblenden",
-        "Fade in": "Ausblenden",
+        "Fade out": "Ausblenden",
+        "Fade in": "Einblenden",
         "Application": "Anwendung",
         "Select Application": "Anwendung auswählen",
         "System": "System",
@@ -26,6 +26,13 @@
         "Device name": "Gerätename",
         "Default": "Standard",
         "Output": "Ausgabe",
-        "Input": "Eingang"
+        "Input": "Eingang",
+        "Fade-Out Bending": "Ausblenden Biegen",
+        "Fade-In Bending": "Einblenden Biegen",
+        "Intensity": "Intensität",
+        "Type": "Typ",
+        "Exponential": "Exponential",
+        "Logarithmic": "Logarithmisch",
+        "For details on the bending, see the SoundFader plugin page in Marketplace.": "Für Details zu den Biegungen siehe die SoundFader-Plugin-Seite im Marketplace."
     }
 }

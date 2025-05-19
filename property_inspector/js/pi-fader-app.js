@@ -4,13 +4,17 @@ const form = document.querySelector('#property-inspector form');
 
 var settings,
     settingsModel = {
-    Mode: 0,
-    AppName: "",
-    AppId: "",
-    Duration: 500,
-    Target: 100,
-    DisplayName: true,
-};
+        Mode: 0,
+        AppName: "",
+        AppId: "",
+        Duration: 500,
+        Target: 100,
+        BendingOut: 0,
+        BendingIn: 0,
+        BendingTypeOut: "POW",
+        BendingTypeIn: "POW",
+        DisplayName: true,
+    };
 
 const FaderActionMode = {
         TOGGLE: 0,
@@ -31,7 +35,9 @@ form.addEventListener('change', () => {
 $PI.onConnected(async ({ actionInfo: { payload } }) => {
     settings = payload?.settings;
     if (settings?.settingsModel) {
-        settingsModel = settings.settingsModel;
+        Object.keys(settings.settingsModel).forEach(key => {
+            settingsModel[key] = settings.settingsModel[key];
+        });
     }
     console.log("initial", settingsModel);
 
@@ -39,6 +45,8 @@ $PI.onConnected(async ({ actionInfo: { payload } }) => {
 
     LocalUtils.setToolTipListeners(document.getElementById('txtDuration'));
     LocalUtils.setToolTipListeners(document.getElementById('txtTarget'));
+    LocalUtils.setToolTipListeners(document.getElementById('txtBendingOut'));
+    LocalUtils.setToolTipListeners(document.getElementById('txtBendingIn'));
 
     updateState();
 });
@@ -74,10 +82,10 @@ const refreshAppList = (list) => {
     }
 
     // Selected but currently unavailable
-    if (this.settingsModel.AppId && !list.some(a => a.Id == this.settingsModel.AppId)) {
+    if (settingsModel.AppId && !list.some(a => a.Id == settingsModel.AppId)) {
         const option = document.createElement('option');
-        option.text = this.settingsModel.AppName;
-        option.value = this.settingsModel.AppId;
+        option.text = settingsModel.AppName;
+        option.value = settingsModel.AppId;
         option.selected = true;
         option.disabled = true;
         select.appendChild(option);

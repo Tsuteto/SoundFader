@@ -26,6 +26,13 @@
         "Device name": "裝置名稱",
         "Default": "預設值",
         "Output": "輸出",
-        "Input": "輸入"
+        "Input": "輸入",
+        "Fade-Out Bending": "淡出彎曲",
+        "Fade-In Bending": "淡入彎曲",
+        "Intensity": "強度",
+        "Type": "類型",
+        "Exponential": "指數型",
+        "Logarithmic": "對數型",
+        "For details on the bending, see the SoundFader plugin page in Marketplace.": "有關彎曲的詳細資訊，請參閱市場中的 SoundFader 外掛程式頁面。"
     }
 }

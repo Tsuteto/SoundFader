@@ -26,6 +26,13 @@
         "Device name": "デバイス名",
         "Default": "デフォルト",
         "Output": "出力",
-        "Input": "入力"
+        "Input": "入力",
+        "Fade-Out Bending": "フェードアウト・ベンド",
+        "Fade-In Bending": "フェードイン・ベンド",
+        "Intensity": "強度",
+        "Type": "タイプ",
+        "Exponential": "指数関数的",
+        "Logarithmic": "対数関数的",
+        "For details on the bending, see the SoundFader plugin page in Marketplace.": "ベンドの詳細は、マーケットプレイスの SoundFader プラグインのページを参照してください。"
     }
 }

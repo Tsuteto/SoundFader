@@ -26,6 +26,13 @@
         "Device name": "디바이스 이름",
         "Default": "기본값",
         "Output": "출력",
-        "Input": "입력"
+        "Input": "입력",
+        "Fade-Out Bending": "페이드 아웃 벤딩",
+        "Fade-In Bending": "페이드 인 벤딩",
+        "Intensity": "강도",
+        "Type": "유형",
+        "Exponential": "지수",
+        "Logarithmic": "로그",
+        "For details on the bending, see the SoundFader plugin page in Marketplace.": "벤딩에 대한 자세한 내용은 마켓플레이스의 SoundFader 플러그인 페이지를 참조하세요."
     }
 }

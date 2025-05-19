@@ -42,8 +42,11 @@ namespace SoundFader.actions
                     await Manager.LogMessageAsync(args.context, $"Specified app: {this.SettingsModel.AppName} ({this.SettingsModel.AppId})");
                 }
 
-                this.SettingsModel.FaderT =
-                    this.SettingsModel.ModeT == FaderActionMode.IN ? Fader.IN : Fader.OUT;
+                if (this.SettingsModel.ModeT != FaderActionMode.TOGGLE)
+                {
+                    this.SettingsModel.FaderT =
+                        this.SettingsModel.ModeT == FaderActionMode.IN ? FadeDir.IN : FadeDir.OUT;
+                }
                 await Manager.SetSettingsAsync(args.context, this.SettingsModel);
 
                 var data = SoundFaderApp.GetAppIcon(this.SettingsModel);

@@ -41,7 +41,7 @@ namespace SoundFader.actions
                     await Manager.LogMessageAsync(args.context, $"Specified device: {this.SettingsModel.DeviceName} ({this.SettingsModel.DeviceId})");
                 }
                 this.SettingsModel.FaderT =
-                        this.SettingsModel.ModeT == FaderActionMode.IN ? Fader.IN : Fader.OUT;
+                        this.SettingsModel.ModeT == FaderActionMode.IN ? FadeDir.IN : FadeDir.OUT;
 
                 await Manager.SetSettingsAsync(args.context, this.SettingsModel);
 

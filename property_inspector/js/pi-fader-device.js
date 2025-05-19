@@ -10,6 +10,10 @@ var settings,
         Direction: null,
         Duration: 500,
         Target: 100,
+        BendingOut: 0,
+        BendingIn: 0,
+        BendingTypeOut: "POW",
+        BendingTypeIn: "POW",
         DisplayName: true,
     };
 
@@ -36,7 +40,9 @@ form.addEventListener('change', () => {
 $PI.onConnected(async ({ actionInfo: { payload } }) => {
     settings = payload?.settings;
     if (settings?.settingsModel) {
-        settingsModel = settings.settingsModel;
+        Object.keys(settings.settingsModel).forEach(key => {
+            settingsModel[key] = settings.settingsModel[key];
+        });
     }
     console.log("initial", settingsModel);
 
@@ -44,6 +50,8 @@ $PI.onConnected(async ({ actionInfo: { payload } }) => {
 
     LocalUtils.setToolTipListeners(document.getElementById('txtDuration'));
     LocalUtils.setToolTipListeners(document.getElementById('txtTarget'));
+    LocalUtils.setToolTipListeners(document.getElementById('txtBendingOut'));
+    LocalUtils.setToolTipListeners(document.getElementById('txtBendingIn'));
 
     updateState();
 });
@@ -83,11 +91,11 @@ const refreshDeviceList = async (list) => {
     outGrp.label = "Output";
     outGrp.setAttribute("data-localize", "");
 
-    if (this.settingsModel.DeviceId && this.settingsModel.Direction == Direction.OUT
-        && !list.some(a => a.Id == this.settingsModel.DeviceId)) {
+    if (settingsModel.DeviceId && settingsModel.Direction == Direction.OUT
+        && !list.some(a => a.Id == settingsModel.DeviceId)) {
         const option = document.createElement('option');
-        option.text = this.settingsModel.DeviceName;
-        option.value = this.settingsModel.DeviceId;
+        option.text = settingsModel.DeviceName;
+        option.value = settingsModel.DeviceId;
         option.selected = true;
         option.disabled = true;
         outGrp.appendChild(option);
@@ -106,11 +114,11 @@ const refreshDeviceList = async (list) => {
     inGrp.label = "Input";
     inGrp.setAttribute("data-localize", "");
 
-    if (this.settingsModel.DeviceId && this.settingsModel.Direction == Direction.IN
-        && !list.some(a => a.Id == this.settingsModel.DeviceId)) {
+    if (settingsModel.DeviceId && settingsModel.Direction == Direction.IN
+        && !list.some(a => a.Id == settingsModel.DeviceId)) {
         const option = document.createElement('option');
-        option.text = this.settingsModel.DeviceName;
-        option.value = this.settingsModel.DeviceId;
+        option.text = settingsModel.DeviceName;
+        option.value = settingsModel.DeviceId;
         option.selected = true;
         option.disabled = true;
         inGrp.appendChild(option);

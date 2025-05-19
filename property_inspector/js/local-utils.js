@@ -84,7 +84,7 @@ class LocalUtils {
             if (element.tagName == 'OPTGROUP') {
                 element.label = element.label.trim().lox();
             } else {
-                element.textContent = element.innerHTML.trim().lox();
+                element.innerHTML = element.innerHTML.trim().lox();
             }
         });
     }

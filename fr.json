@@ -26,6 +26,13 @@
         "Device name": "Nom appareil",
         "Default": "Défaut",
         "Output": "Sortie",
-        "Input": "Entrée"
+        "Input": "Entrée",
+        "Fade-Out Bending": "Fondu sortant de courbure",
+        "Fade-In Bending": "Fondu entrant de courbure",
+        "Intensity": "Intensité",
+        "Type": "Type",
+        "Exponential": "Exponentiel",
+        "Logarithmic": "Logarithmique",
+        "For details on the bending, see the SoundFader plugin page in Marketplace.": "Pour plus de détails sur la courbure, consultez la page du plugin SoundFader sur le Marketplace."
     }
 }

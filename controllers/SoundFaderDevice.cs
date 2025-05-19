@@ -26,7 +26,7 @@ namespace SoundFader.controllers
                 devicesOccupied.Add(settingsModel.DeviceId);
             }
 
-            Fader fader = settingsModel.FaderT;
+            FadeDir fader = settingsModel.FaderT;
             Action<float> setAudioVolume;
             float initial;
 
@@ -55,20 +55,23 @@ namespace SoundFader.controllers
 
             _ = Task.Run(() => SoundFaderCommon.FadingTask(
                     Manager, context, fader,
-                    initial, settingsModel.Duration, settingsModel.Target, setAudioVolume)
+                    initial, settingsModel.Duration, settingsModel.Target,
+                    settingsModel.BendingOut, settingsModel.BendingIn,
+                    settingsModel.BendingTypeOutT, settingsModel.BendingTypeInT,
+                    setAudioVolume)
                 ).ContinueWith(async _ =>
                 {
                     if (settingsModel.ModeT == FaderActionMode.TOGGLE)
                     {
-                        if (fader == Fader.OUT)
+                        if (fader == FadeDir.OUT)
                         {
                             settingsModel.Target = initial * 100f;
                         }
                         var nextFader = settingsModel.FaderT switch
                         {
-                            Fader.OUT => Fader.IN,
-                            Fader.IN => Fader.OUT,
-                            _ => Fader.OUT
+                            FadeDir.OUT => FadeDir.IN,
+                            FadeDir.IN => FadeDir.OUT,
+                            _ => FadeDir.OUT
                         };
                         settingsModel.FaderT = nextFader;
                         await Manager.SetSettingsAsync(context, settingsModel);

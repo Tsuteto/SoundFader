@@ -13,7 +13,7 @@ namespace SoundFader.utils
         const float FONT_SIZE_MIN = 12;
 
         public static Bitmap GenerateIconForApp(
-            string appPath, bool system, Fader fader, string appName, float targetVol, bool displayName)
+            string appPath, bool system, FadeDir fader, string appName, float targetVol, bool displayName)
         {
             Bitmap canvas = new(CANVAS_WIDTH, CANVAS_HEIGHT);
             Graphics g = Graphics.FromImage(canvas);
@@ -38,7 +38,7 @@ namespace SoundFader.utils
             g.DrawImage(Image.FromFile(iconPath), CANVAS_WIDTH - 8 - 96, 56, 96, 48);
 
             // Target volume
-            if (fader == Fader.IN)
+            if (fader == FadeDir.IN)
             {
                 DrawVolume(g, targetVol);
             }
@@ -53,7 +53,7 @@ namespace SoundFader.utils
         }
 
         public static Bitmap GenerateIconForDevice(
-            Fader fader, string deviceIconPath, string deviceName, float targetVol, bool displayName)
+            FadeDir fader, string deviceIconPath, string deviceName, float targetVol, bool displayName)
         {
             Bitmap canvas = new(CANVAS_WIDTH, CANVAS_HEIGHT);
             Graphics g = Graphics.FromImage(canvas);
@@ -66,7 +66,7 @@ namespace SoundFader.utils
             g.DrawImage(Image.FromFile(actionIconPath), CANVAS_WIDTH - 8 - 96, 56, 96, 48);
 
             // Target volume
-            if (fader == Fader.IN)
+            if (fader == FadeDir.IN)
             {
                 DrawVolume(g, targetVol);
             }
@@ -133,9 +133,9 @@ namespace SoundFader.utils
             }
         }
 
-        private static string GetActionIconPath(Fader mode)
+        private static string GetActionIconPath(FadeDir mode)
         {
-            return mode == Fader.OUT ? "images/fade-out.png" : "images/fade-in.png";
+            return mode == FadeDir.OUT ? "images/fade-out.png" : "images/fade-in.png";
         }
     }
 }

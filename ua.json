@@ -26,6 +26,13 @@
         "Device name": "Назва пристрою",
         "Default": "За замовчуванням",
         "Output": "Вихід",
-        "Input": "Вхід"
+        "Input": "Вхід",
+        "Fade-Out Bending": "Зменшення звуку",
+        "Fade-In Bending": "Посилення звуку",
+        "Intensity": "Інтенсивність",
+        "Type": "Тип",
+        "Exponential": "Експоненційний",
+        "Logarithmic": "Логарифмічний",
+        "For details on the bending, see the SoundFader plugin page in Marketplace.": "Для отримання додаткової інформації про вигин дивіться сторінку плагіна SoundFader на ринку."
     }
 }

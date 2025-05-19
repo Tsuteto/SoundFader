@@ -26,6 +26,13 @@
         "Device name": "设备名称",
         "Default": "默认值",
         "Output": "输出",
-        "Input": "输入"
+        "Input": "输入",
+        "Fade-Out Bending": "淡出弯曲",
+        "Fade-In Bending": "淡入弯曲",
+        "Intensity": "强度",
+        "Type": "类型",
+        "Exponential": "指数型",
+        "Logarithmic": "对数型",
+        "For details on the bending, see the SoundFader plugin page in Marketplace.": "有关弯曲的详细信息，请参阅市场中的 SoundFader 插件页面。"
     }
 }
