@@ -15,8 +15,8 @@ namespace SoundFader.controllers
 
     internal class FadingPower : IFadingBehavior
     {
-        public double FadeOut(double b, double x) => 1 - Math.Pow(1 - x, b / 5.0);
-        public double FadeIn(double b, double x) => Math.Pow(x, b / 5.0);
+        public double FadeOut(double b, double x) => 1 - Math.Pow(1 - x, b / 5.0 + 1.0);
+        public double FadeIn(double b, double x) => Math.Pow(x, b / 5.0 + 1.0);
     }
 
     internal class FadingLogarithmic : IFadingBehavior

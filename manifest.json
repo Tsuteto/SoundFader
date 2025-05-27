@@ -37,7 +37,7 @@
     "Name": "Sound Fader",
     "Icon": "images/plugin-icon",
     "URL": "https://tsuteto.hacca.jp/",
-    "Version": "1.1.0",
+    "Version": "1.1.1",
     "SDKVersion": 2,
     "Software": {
         "MinimumVersion": "6.4"
